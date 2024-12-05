@@ -1,0 +1,26 @@
+{
+  "name": "Ella T",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tests:e2e": "npx del-cli test-report && wdio",
+    "report:generate": "npx allure generate --clean ./allure-results/ -o ./allure-report",
+    "report:open": "npx allure open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "mocha": "^10.8.2",
+    "webdriverio": "^9.4.0"
+  },
+  "devDependencies": {
+    "@wdio/allure-reporter": "^9.2.14",
+    "@wdio/cli": "^9.4.0",
+    "@wdio/local-runner": "^9.4.0",
+    "@wdio/mocha-framework": "^9.2.8",
+    "@wdio/spec-reporter": "^9.2.14",
+    "tsx": "^4.19.2"
+  }
+}

@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","5374","should get info for first result of searched film","","Sun Dec 01 11:03:06 IST 2024","passed","Sun Dec 01 11:03:11 IST 2024","","Search results Page tests","",""
+"","3391","should get results for searched film","","Sun Dec 01 11:03:05 IST 2024","passed","Sun Dec 01 11:03:09 IST 2024","","IMDB Home Page tests","",""
+"","7927","should have mandatory info in first result","","Sun Dec 01 11:03:04 IST 2024","passed","Sun Dec 01 11:03:12 IST 2024","","Search result info Page tests","",""
