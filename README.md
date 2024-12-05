@@ -1,4 +1,4 @@
-# WDIO GUI Automation - Ella T
+# IMDB Automation - Ella T
 
 ## Install the dependencies
 
@@ -17,3 +17,6 @@
 -  Run tests ```npm run tests:e2e```
 -  Create report ```npm run report:generate```
 -  Open report ```npm run report:open```
+
+## Overview:
+- Used POM design pattern, Typescript, WDIO to automate scenarios
