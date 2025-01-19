@@ -19,15 +19,17 @@ class SearchResultInfo extends Page {
         return $$('div[class="sc-70a366cc-3 iwmAOx"] a[href*="name/nm"][href*="tt_ov_st"]');
     }
 
-    private get getFilmRate(): Promise<string>{
-        return $('div[class="sc-9a2a0028-3 bwWOiy"] span[class="sc-d541859f-1 imUuxf"]').getText();
+    private get getFilmRate(): ChainablePromiseElement{
+        return $('div[class="sc-9a2a0028-3 bwWOiy"] span[class="sc-d541859f-1 imUuxf"]');
     }
 
     public async isStarExistsinStarList(): Promise<boolean>{
         
-        return (await this.getAllStars
-                                .map((star:any) => star.getText()))
-                                .some((item:string)=>item.includes(this.STAR_NAME));
+        const allStars = await this.getAllStars.map(async (e:any) => {
+            return await this.getInnerHTML(e); 
+        });
+
+        return allStars.some((item:string)=>item.includes(this.STAR_NAME));
     }
 
     /**
@@ -69,7 +71,7 @@ class SearchResultInfo extends Page {
 
     public async validateRate(){
 
-        const rateText = await this.getFilmRate;
+        const rateText = await this.getInnerHTML(this.getFilmRate);
         const rate = parseFloat(rateText);
     
         if (isNaN(rate)) {

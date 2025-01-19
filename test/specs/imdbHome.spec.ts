@@ -4,11 +4,12 @@ import {movies} from '../utils/testData.ts';
 
 describe('IMDB Home Page tests', () => {
 
+    //Navigate to IMDB
     before( async() => {
         await IMDBHomePage.open();
     });
 
-    it('should get results for searched film', async () => {
+    it('should get results of searched film', async () => {
         await IMDBHomePage.searchFilm(movies.godFather);
         await SearchResultsList.validateResultsListDisplayed();
     })

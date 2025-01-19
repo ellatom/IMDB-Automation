@@ -20,3 +20,10 @@
 
 ## Overview:
 - Used POM design pattern, Typescript, WDIO to automate scenarios
+
+- Scenarios:
+- Navigate to IMDB
+- Search Godfather
+- Click on the first result
+- Write the title and description of the movie to the console
+- Verify that the stars contain "Marlon Brando" and rating is higher than 8.0

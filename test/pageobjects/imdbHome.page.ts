@@ -34,8 +34,8 @@ class IMDBHomePage extends Page {
         await this.clickSubmitButton();
     }
 
-    public open () {
-        return super.open(this.BASE_URL);
+    public async open () {
+        return await super.open(this.BASE_URL);
     }
 }
 

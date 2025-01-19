@@ -4,6 +4,7 @@ import { movies } from '../utils/testData.ts';
 
 describe('Search results Page tests', () => {
 
+    //Navigate to IMDB 
     before( async() => {
         await IMDBHomePage.open();
     });
